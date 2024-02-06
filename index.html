@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sampling Results</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-    </style>
 </head>
 <body>
-    <h1>Sampling Results</h1>
-    <pre id="output"></pre>
 
-    <script>
-        // Load and display Sampling.py output
-        fetch('Sampling.py')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('output').textContent = data;
-            })
-            .catch(error => console.error('Error loading Sampling.py:', error));
-    </script>
+<h1>Sampling Results</h1>
+
+<pre id="python-output">
+<!-- Output from your Python script will be inserted here -->
+</pre>
+
+<script>
+    // Use backticks for multiline strings in JavaScript
+    const pythonOutput = `
+        # Your Python script output goes here
+        Random Sampling: (x, y)
+        LHS Sampling: (x, y)
+        Full Factorial Sample: (x, y)
+    `;
+
+    document.getElementById('python-output').innerText = pythonOutput;
+</script>
+
 </body>
 </html>
